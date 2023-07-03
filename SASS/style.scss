@@ -12,6 +12,12 @@
 $mobileBp: 375px;
 $desktopBp: 1440px;
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #container {
     min-height: 50vh;
     display: flex;
