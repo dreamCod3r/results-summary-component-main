@@ -1,0 +1,19 @@
+// Primary Colors( used in table content )
+
+$txtRed: hsl(0, 100%, 67%);
+$txtYellow: hsl(39, 100%, 56%);
+$txtGreen: hsl(166, 100%, 37%);
+$txtBlue: hsl(234, 85%, 45%);
+
+// background colors ( combine them into gradients )
+
+$bgColorSb:  hsl(252, 100%, 67%);
+$bgColorRb:  hsl(241, 81%, 54%);
+$bgLinearGrad: linear-gradient(180deg, $bgColorSb 0%, $bgColorRb 100%);
+$bgColorVb:  hsla(256, 72%, 46%, 1);
+$bgColorPb:  hsla(241, 72%, 46%, 0);
+
+// general text color in div result
+
+$generalTxt: white;
+$grayBlueTxt:hsl(224, 30%, 27%);

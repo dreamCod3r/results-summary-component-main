@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  border-radius: 20px;
+  -moz-box-shadow: 2px 16px 19px 5px rgba(48, 59, 90, 0.11);
+  -webkit-box-shadow: 2px 16px 19px 5px rgba(48, 59, 90, 0.11);
+  box-shadow: 2px 16px 19px 5px rgba(48, 59, 90, 0.11);
+}
+@media (max-width: 375px) {
+  #container {
+    flex-direction: column;
+  }
+}
+
+#result {
+  width: 50%;
+  background: linear-gradient(180deg, hsl(252deg, 100%, 67%) 0%, hsl(241deg, 81%, 54%) 100%);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+#result h2 {
+  margin-bottom: 0;
+}
+#result p {
+  font-weight: 500;
+  padding-inline: 1.7rem;
+  opacity: 0.7888;
+  font-size: 0.899rem;
+}
+#result #total-score {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1.5678fr;
+  border-radius: 50%;
+  background: linear-gradient(180deg, hsl(256deg, 72%, 46%) 0%, hsla(241deg, 72%, 46%, 0) 100%);
+}
+#result #total-score h1 {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 2.3rem;
+}
+#result #total-score p {
+  margin: 0%;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+@media (max-width: 375px) {
+  #result {
+    width: 100%;
+  }
+}
+
+#summary {
+  width: 50%;
+  padding: 30px;
+  color: hsl(224deg, 30%, 27%);
+}
+#summary > * {
+  margin: 15px 0;
+}
+#summary img {
+  vertical-align: middle;
+}
+#summary button {
+  background: linear-gradient(180deg, hsl(252deg, 100%, 67%) 0%, hsl(241deg, 81%, 54%) 100%);
+  border: none;
+  width: 100%;
+  line-height: 2.5;
+  border-radius: 10em;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+}
+@media (max-width: 375px) {
+  #summary button {
+    width: 78%;
+  }
+}
+#summary table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+@media (max-width: 375px) {
+  #summary table {
+    width: 78%;
+  }
+}
+#summary tr td:nth-child(3) {
+  color: hsl(224deg, 30%, 27%);
+  border-radius: 0 5px 5px 0;
+  padding-left: 44px;
+}
+#summary tr td:nth-child(2) {
+  padding-right: 22px;
+}
+#summary tr td:first-child {
+  border-radius: 5px 0 0 5px;
+  padding-left: 7px;
+}
+#summary td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+@media (max-width: 375px) {
+  #summary {
+    width: 100%;
+  }
+}
+
+span {
+  opacity: 0.5;
+  color: hsl(224deg, 30%, 27%);
+}
+
+tr:nth-child(1) {
+  color: hsl(0deg, 100%, 67%);
+  background-color: rgba(255, 87, 87, 0.1);
+}
+
+tr:nth-child(2) {
+  color: hsl(39deg, 100%, 56%);
+  background-color: rgba(255, 176, 31, 0.1);
+}
+
+tr:nth-child(3) {
+  color: hsl(166deg, 100%, 37%);
+  background-color: rgba(0, 189, 145, 0.1);
+}
+
+tr:nth-child(4) {
+  color: hsl(234deg, 85%, 45%);
+  background-color: rgba(17, 37, 212, 0.1);
+}
+
+/*# sourceMappingURL=style.css.map */

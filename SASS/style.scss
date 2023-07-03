@@ -1,0 +1,142 @@
+@use 'mixins' as m;
+@use 'colors';
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+    // box-sizing: border-box;
+    padding: 0;
+}
+
+$mobileBp: 375px;
+$desktopBp: 1440px;
+
+#container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    border-radius: 20px;
+    -moz-box-shadow: 2px 16px 19px 5px rgba(48,59,90,0.11);
+    -webkit-box-shadow: 2px 16px 19px 5px rgba(48,59,90,0.11);
+    box-shadow: 2px 16px 19px 5px rgba(48,59,90,0.11);
+    @include m.mq ($mobileBp) {
+        flex-direction: column;
+    }
+}
+
+#result {
+    width: 50%;
+    background: colors.$bgLinearGrad;
+    color: colors.$generalTxt;
+    text-align: center;
+    border-radius: 20px;
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        font-weight: 500;
+        padding-inline: 1.7rem;
+        opacity: 0.7888;
+        font-size: 0.899rem;
+    }
+    #total-score {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        display: grid;
+        h1 {
+            margin-top: 2rem;
+            margin-bottom: 0;
+            font-size: 2.3rem;
+        }
+        p {
+            margin: 0%;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        grid-template-rows: 1fr 1.5678fr;
+        border-radius: 50%;
+        background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+    }
+    @include m.mq ($mobileBp) {
+        width: 100%;
+    }
+}
+
+#summary {
+    width: 50%;
+    > * {
+        margin: 15px 0;
+    }
+    img {
+        vertical-align: middle;
+    }
+    
+    button {
+        background: colors.$bgLinearGrad;
+        border: none;
+        width: 100%;
+        line-height: 2.5;
+        border-radius: 10em;
+        color: colors.$generalTxt;
+        cursor: pointer;
+        margin: 0;
+        @include m.mq ($mobileBp) {
+            width: 78%;
+        }
+    }
+    padding: 30px;
+    color: colors.$grayBlueTxt;
+    table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        width: 100%;
+        @include m.mq ($mobileBp) {
+            width: 78%;
+        }
+    }
+    tr td:nth-child(3) {
+        color: colors.$grayBlueTxt;
+        border-radius: 0 5px 5px 0;
+        padding-left: 44px;
+    }
+    tr td:nth-child(2) {
+        padding-right: 22px;
+    }
+    tr td:first-child {
+        border-radius: 5px 0 0 5px;
+        padding-left: 7px;
+    }
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    @include m.mq ($mobileBp) {
+        width: 100%;
+    }
+}
+
+span {
+    opacity: 0.5;
+    color: colors.$grayBlueTxt;
+}
+
+$colors: (colors.$txtRed, colors.$txtYellow, colors.$txtGreen, colors.$txtBlue);
+$i: 1;
+
+@each $color in $colors{
+    tr:nth-child(#{$i}){
+        color: $color;
+        background-color: rgba($color, 0.1);
+    }
+    $i: $i + 1;
+}
+
+
+

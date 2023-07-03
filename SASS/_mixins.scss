@@ -1,0 +1,10 @@
+@mixin setOpacity($color, $opacity: 1, $property: background-color) {
+    #{$property}: $color;
+    #{$property}: rgba($color, $opacity);
+}
+
+@mixin mq ($maxWidth) {
+    @media (max-width: $maxWidth) {
+        @content;
+    }
+}
